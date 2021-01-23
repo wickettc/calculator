@@ -1,154 +1,191 @@
 .container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid black;
-  border-radius: 7%;
-  width: 500px;
-  height: 600px;
-  padding: 25px;
-  background-color: #1e1f21;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 7%;
+    width: 500px;
+    height: 600px;
+    padding: 25px;
+    background-color: #1e1f21;
 }
 
 .screen {
-  width: 100%;
-  background-color: #1e1f21;
-  height: 20%;
+    width: 100%;
+    background-color: #1e1f21;
+    height: 20%;
 }
 
 .display {
-  margin: 10%;
-  margin-bottom: 0;
-  border: 1px solid black;
-  border-bottom: none;
-  height: 50%;
-  text-align: right;
-  font-size: 3rem;
-  padding-right: 1%;
-  background-color: #989ba3;
+    margin: 10%;
+    margin-bottom: 0;
+    border: 1px solid black;
+    border-bottom: none;
+    height: 50%;
+    text-align: right;
+    font-size: 3rem;
+    padding-right: 1%;
+    background-color: #989ba3;
 }
 
 .chain-display {
-  height: 25%;
-  border: 1px solid black;
-  margin: 10%;
-  margin-top: 0;
-  text-align: right;
-  background-color: #989ba3;
+    height: 25%;
+    border: 1px solid black;
+    margin: 10%;
+    margin-top: 0;
+    text-align: right;
+    background-color: #989ba3;
 }
 
 .btn-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas:
-    "backspace backspace clear clear"
-    "n7 n8 n9 add"
-    "n4 n5 n6 subtract"
-    "n1 n2 n3 multiply"
-    "decimal n0 equal divide";
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        'backspace backspace clear clear'
+        'n7 n8 n9 add'
+        'n4 n5 n6 subtract'
+        'n1 n2 n3 multiply'
+        'decimal n0 equal divide';
 }
 
 #n9 {
-  grid-area: n9;
+    grid-area: n9;
 }
 
 #n8 {
-  grid-area: n8;
+    grid-area: n8;
 }
 
 #n7 {
-  grid-area: n7;
+    grid-area: n7;
 }
 
 #n6 {
-  grid-area: n6;
+    grid-area: n6;
 }
 
 #n5 {
-  grid-area: n5;
+    grid-area: n5;
 }
 
 #n4 {
-  grid-area: n4;
+    grid-area: n4;
 }
 
 #n3 {
-  grid-area: n3;
+    grid-area: n3;
 }
 
 #n2 {
-  grid-area: n2;
+    grid-area: n2;
 }
 
 #n1 {
-  grid-area: n1;
+    grid-area: n1;
 }
 
 #n0 {
-  grid-area: n0;
+    grid-area: n0;
 }
 
 #backspace {
-  grid-area: backspace;
-  background-color: #202c47;
+    grid-area: backspace;
+    background-color: #202c47;
 }
 
 #add {
-  grid-area: add;
+    grid-area: add;
 }
 
 #subtract {
-  grid-area: subtract;
+    grid-area: subtract;
 }
 
 #multiply {
-  grid-area: multiply;
+    grid-area: multiply;
 }
 
 #divide {
-  grid-area: divide;
+    grid-area: divide;
 }
 
 #decimal {
-  grid-area: decimal;
-  background-color: #394f80;
+    grid-area: decimal;
+    background-color: #394f80;
 }
 
 #clear {
-  grid-area: clear;
-  background-color: #202c47;
+    grid-area: clear;
+    background-color: #202c47;
 }
 
 #equal {
-  grid-area: equal;
-  background-color: #394f80;
+    grid-area: equal;
+    background-color: #394f80;
 }
 
 button {
-  padding: 24px;
-  background-color: #5872ad;
-  margin: 3px;
-  border-radius: 25%;
-  border: 0.5px solid black;
-  font-size: large;
-  color: #b0b3b8;
+    padding: 24px;
+    background-color: #5872ad;
+    margin: 3px;
+    border-radius: 25%;
+    border: 0.5px solid black;
+    font-size: large;
+    color: #b0b3b8;
 }
 
 .operator {
-  background-color: #394f80;
+    background-color: #394f80;
 }
 
 button:focus {
-  outline: none;
+    outline: none;
 }
 
 button:active {
-  transform: scale(0.98);
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 body {
-  background-color: #515357;
+    background-color: #515357;
+}
+
+/* media query */
+@media only screen and (max-width: 767px) {
+    button {
+        padding: 15px;
+        font-size: small;
+    }
+
+    .container {
+        width: 300px;
+        height: 400px;
+    }
+
+    .display {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    button {
+        padding: 10px;
+        font-size: small;
+    }
+
+    .container {
+        width: 200px;
+        height: 300px;
+    }
+
+    .display {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.5rem;
+    }
 }
